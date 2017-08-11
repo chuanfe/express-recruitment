@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><%=title%></title>
+        <link rel="stylesheet" type="text/css" href="/static/css/register.css">
+    </head>
+    <body>
+        <div class="register-content">
+            <div class="register">
+                <div class="headImg"><img src="/static/imgs/logo.png"></div>
+                <div class="re-title"><h2>注册</h2><a href="comRegister.html">企业注册>></a></div>
+                <div class="content-box">
+                    <form method="POST" action="/user/signup">
+                    <ul>
+                        <li><input name="user[name]" type="text" class="com-input" placeholder="只能由中文、字母、数字或半角括号组成，2-30位"></li>
+                        <!-- <li><input type="text" class="com-input" placeholder="请输入手机号" value="" id="telNumber"></li> -->
+                        <!-- <li>
+                            <input type="text" class="com-input first" placeholder="请输入短信验证码" value="">
+                            <input type="button" class="btn last" id="btn-time" value="发送验证码">
+                        </li> -->
+                        <li><input name="user[password]" type="password" class="com-input" placeholder="请输入密码" value=""></li>
+                        <li class="agreement clearfix"><label for="checkbox">
+                            <span class="checkbox-icon"></span>
+                            <input class="checkbox" data-text="我已阅读并同意">我已阅读并同意</input>
+                            <a href="/agreement" target="_blank">《好职得用户协议》</a>
+                        </label></li>
+                        <li class="submit clearfix"><input type="submit" class="btn" value="注&nbsp;册"></li>
+                        <li class="has"><span>已有好职得账号：</span><a href="/signin">直接登录</a></li>
+                    </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

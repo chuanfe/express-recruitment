@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+    color: #333;
+    background: #f5f5f5;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+a {
+    color: #555;
+    background-color: transparent;
+    text-decoration: none;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.register-content {
+    width: 847px;
+    height: 584px;
+    position: relative;
+    top: 45px;
+    padding-top: 45px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.register {
+    width: 361px;
+    margin: 0 auto;
+
+}
+.re-title {
+    text-align: center;
+}
+.re-title h2 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 20px 0 30px 80px;
+}
+.re-title a {
+    float: right;
+    position: relative;
+    top: 30px;
+}
+.register .content-box li {
+    margin-bottom: 16px;
+}
+.com-input {
+    display: inline-block;
+    width: 335px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding: 0 10px;
+}
+.register .content-box li input.first {
+    width: 221px;
+}
+.register .content-box li input.last {
+    font-size: 14px;
+    width: 110px;
+    padding: 0;
+    color: #fff;
+    line-height: 46px;
+    height: 46px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ef5b00;
+}
+.checkbox {
+    zoom: 1;
+    width: 13px;
+    height: 13px;
+    opacity: 0;
+    outline: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.content-box li label {
+    position: relative;
+    cursor: pointer;
+    float: right;
+}
+.checkbox-icon {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 13px;
+    height: 16px;
+    background-image: url(/static/imgs/icons.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.submit .btn {
+    width: 357px;
+    background-color: #ef5b00;
+    height: 45px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Microsoft yahei"
+}
+.content-box .has {
+    text-align: right;
+}
+.content-box .has a {
+    color: #4eb0e8;
+}
+.agreement a {
+    color: #4eb0e8;
+<<<<<<< HEAD
+}
+.use-phone {
+    display: inline-block;
+    width: 178px;
+    cursor: pointer;
+}
+.use-mail {
+    display: inline-block;
+    width: 178px;
+    cursor: pointer;
+}
+.use-phone i {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url(/static/imgs/psd_phone.png) no-repeat;
+    position: relative;
+    top: 7px;
+    margin: 0 10px 0 20px;
+}
+.use-phone.hover i {
+    background: url(../img/psd_phone_h.png) no-repeat;
+}
+.use-mail i {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: url(../img/psd_mail.png) no-repeat;
+    position: relative;
+    top: 7px;
+    margin: 0 10px 0 20px;
+}
+.use-mail.hover i {
+    background: url(../img/psd_mail_h.png);
+}
+.underline {
+    background: url(/static/imgs/psd_icon.png);
+    background-repeat: no-repeat;
+    background-position: 75px 36px;
+    margin-bottom: 20px;
+    border-bottom: solid 2px #ffcc00;
+    padding-bottom: 2px;
+    height: 45px;
+
+=======
+>>>>>>> 3710caf94cd6e7d33837972af50441de42218a29
+}

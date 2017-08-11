@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      each item in jobs
+        .col-md-2
+          .thumbnail
+            a(href="/job/#{item._id}")
+              img(src="#{item.img}", alt="#{item.name}")
+            .caption
+              h3 #{item.name}
+              p: a.btn.btn-primary(href="/job/#{item._id}", role="button")
+                观看预告片

@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><%=title%></title>
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/resume.css">
+    </head>
+    <body>
+        <%include ../includes/head.html %>
+        <div class="container">
+            <div class="resume-l">
+                <div class="head-picture">
+                    <div class="uploadPreview"></div>
+                    <input class="uploadImage" type="file" name="photoimage" class="fimg1" />
+                    <span>上传照片</span>
+                </div>
+            </div>
+            <div class="resume-r">
+                <div class="description"><h2>账号信息</h2></div>
+                <div class="user-info">
+                    <h2><%=user.name%></h2>
+                    <ul>
+                        <li><span>年龄：</span>23岁</li>
+                        <li><span>性别：</span>男</li>
+                        <li class="nation"><span>民族：</span>汉族</li>
+                        <li><span>学历：</span>大专</li>
+                        <li><span>工作年限：</span>8年</li>
+                        <li><span>身高：</span>180cm</li>
+                        <li><span>无纹身烟疤</span></li>
+                    </ul>
+                </div>
+                <div class="description"><h2>求职意向</h2></div>
+                <div class="job-wanted">
+                    <dl>
+                        <div class="mar10">
+                            <dt>求职性质：</dt>
+                            <dd>
+                                <span class="property-list on">
+                                    <input type="radio" checked="checked" name="property" class="radioclass">
+                                </span>
+                                <span>全职</span>
+                                <span class="property-list">
+                                    <input type="radio" checked="checked" name="property" class="radioclass">
+                                </span>
+                                <span>实习</span>
+                            </dd>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="mar10">
+                            <dt>期望行业：</dt>
+                            <dd>
+                                <div class="indus-select">
+                                    <div class="indus-select-left"></div>
+                                    <div class="indus-select-right"><i class="icon"></i></div>
+                                    <div class="select-list" style="display: none;">
+                                        <ul>
+                                            <li><a href="javascript:void(0);" class="select-option">电子信息</a></li>
+                                            <li><a href="javascript:void(0);" class="select-option">快递物流</a></li>
+                                            <li><a href="javascript:void(0);" class="select-option">物业保安</a></li>
+                                            <li><a href="javascript:void(0);" class="select-option">电子信息</a></li>
+                                            <li><a href="javascript:void(0);" class="select-option">快递物流</a></li>
+                                            <li><a href="javascript:void(0);" class="select-option">物业保安</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="mar10">
+                            <dt>其他要求：</dt>
+                            <dd class="other-require">
+                                <div class="require-checked">
+                                    <i></i><label>保吃</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>包住</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>厂车接送</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>全勤</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>双休</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>有年假</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>技术培训</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>年终奖</label>
+                                </div>
+                                <div class="require-checked">
+                                    <i></i><label>加班补贴</label>
+                                </div>
+                                
+                            </dd>
+                        </div>
+                        
+                        <div class="clear"></div>
+                        <p class="select-tips">最多可选<b>3</b>项，已选<b class="selected">0</b>项</p>
+                        <div class="clear"></div>
+
+                    </dl>
+                </div>
+                <div class="description"><h2>工作经历</h2><span class="add-experience">添加</span></div>
+                <div class="work-experience">
+                    <dl>
+                        <dt>公司名称：</dt><dd><input name="com_name" type="text" /></dd>
+                        
+                        <dt>工作时间：</dt>
+                        <dd>
+                            <div class="indus-select">
+                                <div class="indus-select-left"></div>
+                                <div class="indus-select-right"><i class="icon"></i></div>
+                                <div class="select-list" style="display: none;">
+                                    
+                                </div>
+                            </div>
+                        </dd>
+                        <dt>担任职位：</dt><dd><input name="com_name" type="text" /></dd>
+                        <dt>工作内容：</dt><dd><textarea rows="3" cols="20"></textarea></dd>
+                        <div class="clear"></div>
+                    </dl>
+                </div>
+
+                <div class="submit-wrap">
+                    <span class="cancel">取消</span>
+                    <span class="save">保存</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

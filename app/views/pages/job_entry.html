@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><%=title%></title>
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+    <%include ../includes/head.html %>
+	<div class="container">
+        <h3><%=title%></h3>
+        <div class="row">
+            <form action="/admin/job/new" class="form-horizontal" method="post">
+                <input type="hidden" name="job[_id]" value="<%=job._id%>">
+                <div class="form-group">
+                    <label for="inputName" class="col-sm-3 control-label">职位名称</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputName" class="form-control" name="job[name]" value="<%=job.name%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputCompany" class="col-sm-3 control-label">公司名称</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputCompany" class="form-control" name="job[company]" value="<%=job.company%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputCity" class="col-sm-3 control-label">所在城市</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputCity" class="form-control" name="job[city]" value="<%=job.city%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputExperience" class="col-sm-3 control-label">经验要求</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputExperience" class="form-control" name="job[experience]" value="<%=job.experience%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEducation" class="col-sm-3 control-label">学历要求</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputEducation" class="form-control" name="job[education]" value="<%=job.education%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputWelfare" class="col-sm-3 control-label">福利诱惑</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputWelfare" class="form-control" name="job[welfare]" value="<%=job.welfare%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputMinsalary" class="col-sm-3 control-label">最低工资</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputMinsalary" class="form-control" name="job[min_salary]" value="<%=job.min_salary%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputMaxsalary" class="col-sm-3 control-label">最高工资</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputMaxsalary" class="form-control" name="job[max_salary]" value="<%=job.max_salary%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputImg" class="col-sm-3 control-label">展示图片地址</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputImg" class="form-control" name="job[img]" value="<%=job.img%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputDistrict" class="col-sm-3 control-label">工作地址</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputDistrict" class="form-control" name="job[district]" value="<%=job.district%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputDescription" class="col-sm-3 control-label">工作描述</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputDescription" class="form-control" name="job[description]" value="<%=job.description%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputRequirement" class="col-sm-3 control-label">工作要求</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputRequirement" class="form-control" name="job[requirement]" value="<%=job.requirement%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputSummary" class="col-sm-3 control-label">公司简介</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputSummary" class="form-control" name="job[company_intro]" value="<%=job.company_intro%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputOffers" class="col-sm-3 control-label">招聘人数</label>
+                    <div class="col-sm-7">
+                        <input type="text" id="inputOffers" class="form-control" name="job[offers_number]" value="<%=job.offers_number%>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputRecommend" class="col-sm-3 control-label">推荐职位</label>
+                    <div class="col-sm-7">
+                        <select class="form-control" name="job[recommend]" id="inputRecommend" value="<%=job.recommend%>">
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group margin-bottom-6">
+                    <div class="col-sm-offset-3 col-sm-7">
+                        <button class="btn btn-default" type="submit">录入</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+</body>
+</html>

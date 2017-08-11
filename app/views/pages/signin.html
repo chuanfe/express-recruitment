@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><%=title%></title>
+        <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+    </head>
+    <body>
+        <div class="register-content">
+            <div class="register">
+                <div class="headImg"><img src="/static/imgs/logo.png"></div>
+                <div class="re-title"><h2>账号登录</h2></div>
+                <div class="content-box">
+                    <form method="POST" action="/user/signin">
+                        <ul>
+                        <li><input type="text" class="com-input" placeholder="请输入账号" value="" name="user[name]" id="phone"></li>
+                        <!-- <li><input type="text" class="com-input" placeholder="请输入手机号" value="" name="phone" id="phone"></li> -->
+                        <li><input type="password" class="com-input" placeholder="请输入密码" value="" name="user[password]" id="password"></li>
+                        <li class="agreement clearfix"><label for="checkbox">
+                            <a href="/accounts/forgot">忘记密码</a>
+                        </label></li>
+                        <li class="submit clearfix"><input type="submit" class="btn" value="立即登录"></li>
+                        <li class="has"><span>还没有好职得账号，</span><a href="/signup">立即注册</a></li>
+                    </ul>
+                    </form>
+                    
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>

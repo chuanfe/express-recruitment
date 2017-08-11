@@ -1,0 +1,88 @@
+<script src="/libs/jquery/dist/jquery.min.js"></script>
+<script src="/static/js/slider.js"></script>
+<script src="/static/js/head.js"></script>
+<link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+<script src="/libs/jquery/dist/jquery.min.js"></script>
+<script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<div class="hzd-tnav-wrap">
+    <div class="hzd-tnav">
+        <div class="hzd-tnav-l"><a class="hzd-logo" href="/"><h1>好职得</h1></a></div>               
+            <ul class="hzd-tnav-r">
+                <li><a href="/">首页</a></li>
+                <li><a href="/search?q=普工">普工</a></li>
+                <li><a href="/search?q=物业物流">物业物流</a></li>
+                <li><a href="/search?q=服务">服务</a></li>
+            </ul>
+    </div>
+    <div class="head-search">
+        <form class="search-form" method="POST" action="/search">
+            <input name="keyword" type="text" class="input-text" placeholder="搜索职位">
+            <input type="submit" value="" class="input-submit">
+        </form>
+    </div>
+</div>
+
+<div class="hzd-tbar-wrap">
+    <div class="hzd-tbar">
+        <div class="hzd-tbar-l">
+            <h2>南京</h2><span>【<a href="###">切换城市</a>】</span>
+        </div>
+        <% if(user) { %>
+        <ul class="hzd-tbar-r">
+            <li><a href="javascript:void(0)">消息</a></li>
+            <li class="selected"><a href="register/register.html">个人中心</a><i></i>
+                <% if(user.role >= 50) { %>
+                <ul>
+                    <li><a href="/admin/job">发布职位</a></li>
+                    <li><a href="/admin/job/list">职位列表</a></li>
+                </ul>
+                <%} else{%>
+                <ul>
+                    <li><a href="/user/resume">我的简历</a></li>
+                    <li><a href="">职位申请</a></li>
+                </ul>
+                <%}%>
+            </li>
+            <li class="has-login selected"><a class="sl" href="register/comRegister.html"><%= user.name %></a><i></i>
+                <ul>
+                    <li><a href="">密码修改</a></li>
+                    <li><a href="/logout">退出</a></li>
+                </ul>
+            </li>
+        </ul>        
+        <%} else{%>
+        <ul class="hzd-tbar-r">
+            <li><a href="/signin">个人入口</a></li>
+            <!-- <li><a class="sl" target="_blank" href="http://qy.haozhide.com.cn/">企业入口</a></li> -->
+        </ul>
+
+        <!-- 登录状态 -->
+        <%}%>
+        
+    </div>
+    <script>
+    //获取URL参数
+    function GetQueryString(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  decodeURI(r[2]); return null;
+    }
+    //根据搜索条件改变菜单样式
+    $(function(){
+        var cur = GetQueryString('q')
+        var lis = $('.hzd-tnav-r li')
+        
+        for(var i = 0;i < lis.length;i++) {
+            var _li = $('.hzd-tnav-r li:eq('+i+')')[0].textContent
+            if(_li == cur) {
+                $('.hzd-tnav-r li').removeClass('current')
+                $('.hzd-tnav-r li:eq('+i+')').addClass('current')
+                return
+            } else {
+                $('.hzd-tnav-r li:eq(0)').addClass('current')
+            }
+        }
+    })
+        
+    </script>
+</div>

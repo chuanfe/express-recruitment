@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+    <%include ../includes/head.html %>
+    <div class="content clearfix">
+        <div class="jobs clearfix">
+            <!-- 职位列表 -->
+            <div class="job-list clearfix">
+                <div class="recommend-job">
+                    <ul>
+                        <%for(var i = 0 ; i < jobs.length ; i++) {%>
+                        <li>
+                            <div class="job-img"><img src=<%= jobs[i].img%>></div>
+                            <div class="job-name"><h2><a href="###"><%= jobs[i].name%><span>[<%= jobs[i].city%>]</span></a></h2></div>
+                            <div class="job-detail">
+                                <span class="pay"><em>月薪：</em><i><%= jobs[i].min_salary%>-<%= jobs[i].max_salary%></i></span>
+                                <span><em>经验：</em><i><%= jobs[i].experience%></i></span>
+                                <span><em>学历：</em><i><%= jobs[i].education%></i></span>
+                            </div>
+                            <div class="experience"><span><em>经验要求：</em><i><%= jobs[i].requirement%></i></span></div>
+                            <div class="benifit"><span><em>职位诱惑：</em><i><%= jobs[i].welfare%></i></span></div>
+                            <div class="apply-advice"><a href="/job/<%= jobs[i].id%>" class="apply">申请</a><a href="###" class="advice">咨询</a></div>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- 职位列表 end -->
+        </div>
+    </div>
+    <%include ../includes/footer.html %>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>

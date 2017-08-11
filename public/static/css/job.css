@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+    color: #333;
+    background: #f5f5f5;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    color: #555;
+    background-color: transparent;
+    text-decoration: none;
+}
+/*头部*/
+.hzd-tbar-wrap {
+    min-width: 1000px;
+    height: 30px;
+    background-color: #333;
+}
+.hzd-tbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.hzd-tbar-l {
+    float: left;
+    line-height: 30px;
+}
+.hzd-tbar-l h2 {
+    display: inline;
+    font-size: 14px;
+    color: #e6e6e6;
+    margin: 0;
+}
+.hzd-tbar-l span {
+    margin-left: 3px;
+    color: #e6e6e6;
+}
+.hzd-tbar-l span a {
+    color: #e6e6e6;
+    text-decoration: none;
+}
+.hzd-tbar-r {
+    float: right;
+    margin-bottom: 0;
+}
+.hzd-tbar-r li {
+    float: left;
+    height: 30px;
+}
+.hzd-tbar-r li a {
+    color: #e6e6e6;
+    float: left;
+    line-height: 15px;
+    padding: 0 12px;
+    margin: 7px 0 0;
+}
+.hzd-tbar-r li .sl {
+    border-left: solid 1px #e6e6e6;
+}
+.hzd-header {
+    min-width: 1000px;
+    background: #fff;
+    margin-bottom: 56px;
+}
+.hzd-tnav-wrap {
+    max-width: 1000px;
+    height: 117px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hzd-tnav .hzd-tnav-l, .hzd-tnav-r  {
+    float: left;
+}
+.hzd-tnav-l .hzd-logo h1 {
+    float: left;
+    width: 350px;
+    height: 80px;
+    background: url(/static/imgs/logo.png) no-repeat;
+    text-indent: -99em;
+    margin: 23px 0 14px 0;
+    overflow: hidden;
+}
+.hzd-tnav-r li {
+    float: left;
+    margin: 0px;
+}
+.hzd-tnav-r li a {
+    display: block;
+    font-size: 18px;
+    color: #4f4c4b;
+    line-height: 50px;
+    padding: 0 25px;
+    height: 50px;
+    margin: 33px 0;
+}
+.hzd-tnav-r .current a {
+    color: #e85f2f;
+    border-bottom: solid 1px #e85f2f;
+}
+.head-search {
+    position: absolute;
+    right: 0;
+}
+.search-form {
+    width: 263px;
+    height: 26px;
+    margin: 44px 0;
+    position: relative;
+    border: solid 1px #d9d6d6; 
+}
+.search-form .input-text {
+    height: 24px;
+    border: none 0;
+    outline:none;
+    padding-left: 2%;
+}
+.search-form .input-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 26px;
+    width: 28px;
+    border: 0;
+    cursor: pointer;
+    background-image: url(/static/imgs/search.png);
+}
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: table;
+}
+.clear {
+    clear: both;
+}
+.container {
+    width: 924px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 50px 38px;
+}
+.job-info .j-img {
+    width: 363px;
+    height: 200px;
+    float: left;
+    background: #f5f5f5;
+}
+.job-info .j-detail {
+    width: 520px;
+    height: 200px;
+    float: left;
+    margin-left: 25px;
+    position: relative;
+}
+.j-detail h2 {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+.j-detail ul {
+    overflow: hidden;
+}
+.j-detail ul li {
+    float: left;
+    width: 250px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+}
+.j-detail .mar15 {
+    margin-right: 15px;
+}
+.job-special {
+    position: absolute;
+    bottom: 6px;
+}
+.job-special span {
+    height: 224px;
+    padding: 6px 10px;
+    color: #fff;
+    margin-right: 7px;
+}
+.lightblue {
+    background: #88b9b9;
+}
+.pink {
+    background: #dd9e99;
+}
+.doderblue {
+    background: #acc56b;
+}
+.skyblue {
+    background: #99b3dd;
+}
+.content-l {
+    float: left;
+    width: 616px;
+    margin-top: 30px;
+    margin-right: 48px;
+}
+.job-desc {
+    margin-right: 40px;
+    color: #666;
+}
+.content-r {
+    float: left;
+    width: 250px;
+    margin-top: 30px;
+}
+.description {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid 3px #e5e5e5;
+}
+.description h2 {
+    width: 80px;
+    font-weight: normal;
+    font-size: 20px;
+    border-bottom: solid 3px #4eb0e8;
+    margin: 0;
+    
+}
+.job-desc .detail-title {
+    color: #666;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.job-desc .detail-content {
+    line-height: 30px;
+}
+.job-company {
+    margin-top: 30px;
+    max-height: 250px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.job-company ul li {
+    margin: 10px 0;
+    line-height: 25px;
+}
+.work-place h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.company-logo {
+    max-height: 150px;
+    overflow: hidden;
+    margin-top: 25px;
+}
+.contact-wrap {
+    width: 100%;
+    height: 114px;
+    background: rgba(40,40,40,0.9);
+    opacity: 0.8;
+}
+.job-contacts {
+    width: 1000px;
+    
+    margin: 0 auto;
+    
+    
+}
+.job-contacts ul li {
+    height: 114px;
+    line-height: 114px;
+    float: left;
+    color: #fff;
+}
+.job-contacts h3,h2 {
+    margin: 0;
+}
+.job-contacts .send i {
+    display: inline-block;
+    width: 38px;
+    height: 34px;
+    position: relative;
+    top: 10px;
+    background: url(/static/imgs/send.png);
+}
+.job-contacts ul .contact {
+    width: 218px;
+    height: 84px;
+    line-height: 20px;
+    margin-top: 30px;
+    
+}
+.job-contacts .contact h3 {
+    font-size: 24px;
+    font-weight: normal;
+}
+.job-contacts .contact p {
+    font-size: 15px;
+}
+.job-contacts .hzd h2{
+    width: 377px;
+    height: 58px;
+    font-size: 34px;
+    border-left: solid 1px #fff;
+    margin-top: 30px;
+    line-height: 50px;
+    padding-left: 46px;
+}
+.job-contacts .advice {
+    width: 162px;
+    font-size: 20px;
+    text-align: center;
+    background: #000;
+}
+.job-contacts .advice a {
+    color: #63b4ff;
+}
+.job-contacts .send {
+    width: 196px;
+    text-align: center;
+    background: #ff5e26;
+}
+.job-contacts .send a {
+    font-size: 20px;
+    color: #fff;
+    margin-left: 8px;
+}

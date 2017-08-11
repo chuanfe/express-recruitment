@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><%=title%></title>
+	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+    <%include ../includes/head.html %>
+	<div class="container">
+        <h3><%=title%></h3>
+        <div class="row">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>职位名称</th>
+                        <th>公司名称</th>
+                        <th>最低工资</th>
+                        <th>最高工资</th>
+                        <th>所在城市</th>
+                        <th>招聘人数</th>
+                        <th>查看</th>
+                        <th>更新</th>
+                        <th>删除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%for(var i = 0 ; i < jobs.length ; i++) {%> 
+                    <tr class="item-id-<%= jobs[i]._id %>">
+                        <td><%= jobs[i].name %></td>
+                        <td><%= jobs[i].company %></td>
+                        <td><%= jobs[i].min_salary %></td>
+                        <td><%= jobs[i].max_salary %></td>
+                        <td><%= jobs[i].city %></td>
+                        <td><%= jobs[i].offers_number %></td>
+                        <td><a target="_blank" href="/job/<%= jobs[i]._id %>">查看</a></td>
+                        <td><a target="_blank" href="/admin/job/update/<%= jobs[i]._id %>">修改</a></td>
+                        <td>
+                            <button class="btn btn-danger del" type="button" data-id="<%= jobs[i]._id %>">删除</button>
+                        </td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+	</div>
+</body>
+<script src="/js/admin.js"></script>
+</html>

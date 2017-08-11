@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+</head>
+<body>
+    <%include ../includes/head.html %>
+    <!--<ul>
+        <%for(var i = 0 ; i < jobs.length ; i++) {%>
+        <li><%= jobs[i]%></li>
+        <%}%>
+    </ul>-->
+    <div class="content clearfix">
+        <div class="slider-content">
+            <div id="banner_tabs" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <a title="" target="_blank" href="#">
+                            <img alt="" style="background: url(/static/imgs/banner1.png) no-repeat center; background-color:#4eb0e8">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="" href="#">
+                            <img alt="" style="background: url(/static/imgs/banner1.png) no-repeat center; background-color:#4eb0e8">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="" href="#">
+                            <img alt="" style="background: url(/static/imgs/banner1.png) no-repeat center; background-color:#4eb0e8">
+                        </a>
+                    </li>
+                </ul>
+                
+                <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+                    <li><a>1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>2</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="hzd-promise">
+            <div class="inner">
+                <div class="one">
+                    <i></i><div class="r"><h3>企业直招</h3><span>无需中介</span></div>
+                </div>
+                <div class="two">
+                    <i></i><div class="r"><h3>线上咨询</h3><span>高效沟通</span></div>
+                </div>
+                <div class="three">
+                    <i></i><div class="r"><h3>信息可靠</h3><span>安全保障</span></div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="jobs clearfix">
+            <!-- 推荐职位 -->
+            <ul class="job-tab clearfix">
+                <li class="title">推荐职位</li>
+                <li class="more"><a href="###">查看更多</a></li>
+            </ul>
+            <div class="job-list clearfix">
+                <div class="recommend-job">
+                    <ul>
+                        <%for(var i = 0 ; i < jobs.length ; i++) {%>
+                            <% if(jobs[i].recommend) { %>
+                            <li>
+                                <div class="job-img"><img src=<%= jobs[i].img%>></div>
+                                <div class="job-name"><h2><a href="###"><%= jobs[i].name%><span>[<%= jobs[i].city%>]</span></a></h2></div>
+                                <div class="job-detail">
+                                    <span class="pay"><em>月薪：</em><i><%= jobs[i].min_salary%>-<%= jobs[i].max_salary%></i></span>
+                                    <span><em>经验：</em><i><%= jobs[i].experience%></i></span>
+                                    <span><em>学历：</em><i><%= jobs[i].education%></i></span>
+                                </div>
+                                <div class="experience"><span><em>经验要求：</em><i><%= jobs[i].requirement%></i></span></div>
+                                <div class="benifit"><span><em>职位诱惑：</em><i><%= jobs[i].welfare%></i></span></div>
+                                <div class="apply-advice"><a href="job/<%= jobs[i].id%>" class="apply">申请</a><a href="###" class="advice">咨询</a></div>
+                            </li>
+                            <%}%>
+                        <%}%>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- 最热职位 -->
+            <ul class="job-tab clearfix">
+                <li class="title">最热职位</li>
+                <li class="more"><a href="###">查看更多</a></li>
+            </ul>
+            <div class="job-list clearfix">
+                <div class="hot-job">
+                    <ul>
+                        <%for(var i = 0 ; i < jobs.length ; i++) {%>
+                            <% if(!jobs[i].recommend) { %>
+                            <li>
+                                <div class="job-img"><img src=<%= jobs[i].img%>></div>
+                                <div class="job-name"><h2><a href="###"><%= jobs[i].name%><span>[<%= jobs[i].city%>]</span></a></h2></div>
+                                <div class="job-detail">
+                                    <span class="pay"><em>月薪：</em><i><%= jobs[i].min_salary%>-<%= jobs[i].max_salary%></i></span>
+                                    <span><em>经验：</em><i><%= jobs[i].experience%></i></span>
+                                    <span><em>学历：</em><i><%= jobs[i].education%></i></span>
+                                </div>
+                                <div class="experience"><span><em>经验要求：</em><i><%= jobs[i].requirement%></i></span></div>
+                                <div class="benifit"><span><em>职位诱惑：</em><i><%= jobs[i].welfare%></i></span></div>
+                                <div class="apply-advice"><a href="job/<%= jobs[i].id%>" class="apply">申请</a><a href="###" class="advice">咨询</a></div>
+                            </li>
+                            <%}%>
+                        <%}%>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <%include ../includes/footer.html %>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
