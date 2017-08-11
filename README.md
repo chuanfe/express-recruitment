@@ -1,8 +1,8 @@
-# node-mongodb-demo
+# express-recruitment
 
 # 介绍
 
-学习慕课网Scott大神的node视频教程[地址](http://www.imooc.com/learn/75)写的全部代码，在本地能成功跑起来
+基于express-MongoDB写的一个比较完整的招聘平台，功能不断完善中
 
 # 安装部署
 ```
